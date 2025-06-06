@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FirewallController">
+    <Label text="Firewall Rule Management"/>
+    <HBox>
+        <Label text="Direction:"/>
+        <TextField fx:id="directionField" promptText="IN/OUT"/>
+        <Label text="Protocol:"/>
+        <TextField fx:id="protocolField" promptText="TCP/UDP"/>
+        <Label text="Port:"/>
+        <TextField fx:id="portField" promptText="Port number"/>
+    </HBox>
+    <HBox>
+        <Label text="Source IP:"/>
+        <TextField fx:id="sourceIpField" promptText="Source IP"/>
+        <Label text="Destination IP:"/>
+        <TextField fx:id="destinationIpField" promptText="Destination IP"/>
+        <Label text="Action:"/>
+        <TextField fx:id="actionField" promptText="ALLOW/BLOCK"/>
+    </HBox>
+    <HBox>
+        <Button text="Add Rule" onAction="#addRule"/>
+        <Button text="Load Rules" onAction="#loadRules"/>
+        <Button text="Start Simulation" onAction="#startSimulation"/>
+
+    <Button text="Stop Simulation" onAction="#stopSimulation"/>
+
+
+    </HBox>
+    <Label text="Rules List"/>
+    <ListView fx:id="rulesList" prefHeight="200"/>
+    <Label text="Log"/>
+    <TextArea fx:id="logArea" prefHeight="100"/>
+</VBox>
