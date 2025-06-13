@@ -4,8 +4,8 @@ import java.util.List;
 
 public class DbManager {
     private static final String DB_URL = "jdbc:oracle:thin:@localhost:1521/XEPDB1";
-    private static final String USER = "system";
-    private static final String PASS = "dbms123";
+    private static final String USER = "****";
+    private static final String PASS = "****";
 
     public static List<Packet> loadRules() {
         List<Packet> rules = new ArrayList<>();
